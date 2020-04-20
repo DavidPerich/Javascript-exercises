@@ -1,0 +1,42 @@
+
+body {
+  background-color: #999900;
+}
+
+section {
+  width: 600px;
+  background: white;
+  padding: 10px 20px 10px 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  font: 2em 700 helvetica;
+  color: white;
+  text-align: center;
+}
+
+h3 {
+  font: 1.2em helvetica;
+}
+
+button {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  padding: 10;
+}
+
+button::after {
+  content: "Show More";
+}
+
+button.longDescription::after {
+  content: "Show Less";
+
+}
+
+button.longDescription {
+  background-color: blue;
+
+}

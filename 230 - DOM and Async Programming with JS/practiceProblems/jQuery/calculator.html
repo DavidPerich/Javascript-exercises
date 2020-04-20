@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="calculator.css">
+  </head>
+  <body>
+    <div class="box">
+    <h1>Calculator</h1>
+
+      <h2 id="answer">0</h2>
+      <form action="" method="GET">
+          <input type="text"  name="firstNumber" id="firstNumber" placeholder="0">
+          <select name="operation" id="operation">
+              <option value="plus">+</option>
+              <option value="minus">-</option>
+              <option value="multiply">x</option>
+              <option value="divide">/</option>
+          </select>
+
+          <input type="text"  name="secondNumber" id="secondNumber" placeholder="0">
+
+          <input type="submit" value="=">
+        </form>
+    </div>
+  </body>
+</html>

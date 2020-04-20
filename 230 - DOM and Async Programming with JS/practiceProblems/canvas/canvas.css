@@ -1,0 +1,66 @@
+body {
+  font: normal 14px Helvetica, Arial, sans-serif;
+  background: #780E24;
+}
+main {
+  width: 802px;
+  padding: 25px 25px 0 25px;
+  margin: 0 auto;
+  background: #ffffff;
+}
+.canvas {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border: 1px solid #cccccc;
+  background: linear-gradient(to bottom, #ffffff 0%, #0066cc 100%);
+}
+
+.canvas, .shape-controls, .start-stop {
+  width: 800px;
+}
+
+.canvas > div {
+  position: absolute;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.canvas .cat {
+  background: transparent url("images/cat.png");
+}
+
+.canvas .dog {
+  background-image: url("images/dog.png");
+}
+
+.canvas .poop {
+  background: transparent url("images/poop.png");
+}
+
+.shape-controls {
+  padding: 0 0 20px 0;
+}
+
+.start-stop * {
+  display: inline-block;
+}
+
+input[type=number] {
+  height: 30px;
+  width: 70px;
+}
+
+ul {
+  list-style: none outside;
+  padding-inline-start: 0px;
+
+}
+
+input[type=submit] {
+  margin: 10px 0 0 0;
+  display: block;
+}

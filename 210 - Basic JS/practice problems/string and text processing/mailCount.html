@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <script src="http://dbdwvr6p7sskw.cloudfront.net/210/files/email_data_v2.js"></script>
+ <script>
+    function mailCount(emailData) {
+      var numberOfEmails;
+      var emails;
+      var dates;
+
+      emails = emailData.split(/##\|\|##/);
+      dates = emails.map(function (email) {
+        return email.match(/\d\d-\d\d-\d{4}/);
+      })
+
+      dates = dates.map((result) => new Date(result[0])).sort(dateSort);
+
+    console.log(`Count of Email: ${emails.length}`);
+    console.log(`Date Range: ${dates[0]} - ${dates[dates.length - 1]}`);
+  }
+
+  function dateSort(date1, date2) {
+      if (date1 > date2) return 1;
+      if (date1 < date2) return -1;
+      return 0;
+  }
+
+    mailCount(emailData);
+ </script>
+  </head>
+  <body>
+  </body>
+</html>

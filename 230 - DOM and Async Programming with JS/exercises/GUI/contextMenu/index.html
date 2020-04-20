@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Todos</h1>
+      <div id="todoList">
+
+      </div>
+    </main>
+
+
+
+    <script id="todos" type="text/x-handlebars">
+      <ul>
+        {{#each todos}}
+        <li data-id={{id}}>{{title}}</li>
+        {{/each}}
+      </ul>
+    </script>
+
+      <script id="modalScript" type="text/x-handlebars">
+        <div id="modal">
+            <h2>Are you sure you want to delete this todo?</h2>
+            <div class="actions">
+              <button type="button" id="yesButton">Yes</button>
+              <button type="button" id="noButton">No</button>
+            </div>
+          </div>
+      </script>
+
+
+      <script id="contextMenuScript" type="text/x-handlebars">
+        <div id="contextMenu">
+          <ul>
+              <li><a href="#">Edit Todo</a></li>
+              <li><a href="#">Show Details</a></li>
+              <li><a href="#" id="remove">Delete</a></li>
+          </ul>
+        </div>
+      </script>
+
+  </body>
+</html>

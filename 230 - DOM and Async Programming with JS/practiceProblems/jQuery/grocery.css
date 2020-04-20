@@ -1,0 +1,41 @@
+body {
+  background:  #59C4AB
+}
+
+.box {
+  background: white;
+  padding: 20px;
+  margin: 0 auto;
+  width: 40%;
+  box-sizing: border-box;
+  color: #59C4AB;
+  font-weight: bold;
+}
+
+.form, .list {
+  width: 100%;
+  ;
+}
+
+input {
+  display: block;
+}
+
+input[type="submit"] {
+  display: block;
+  background: red;
+  border-radius: 10px;
+  border: 0;
+  color: white;
+  padding: 10px 50px;
+
+}
+
+h1 {
+  color: red;
+  font-size: 2em;
+}
+
+h2 {
+  color: #59C4AB
+}

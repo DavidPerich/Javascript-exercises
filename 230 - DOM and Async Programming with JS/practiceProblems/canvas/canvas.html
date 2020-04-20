@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="canvas.js"></script>
+    <link rel="stylesheet" href="canvas.css">
+    </script>
+  </head>
+  <body>
+    <main>
+        <article class="canvas"></article>
+
+        <div class="start-stop">
+          <a href="#" id="start">Start</a>
+          <p>|</p>
+          <a href="#" id="stop">Stop</a>
+        </div>
+
+        <div class="shape-controls">
+          <h1>Add a shape</h1>
+          <h2>Type</h2>
+          <form action="#" method="post">
+            <ul id="type">
+                <li><label><input type="radio" name="shape-type" value="poop">Poop</label></li>
+                <li><label><input type="radio" name="shape-type" value="dog">Dog</label></li>
+                <li><label><input type="radio" name="shape-type" value="cat">Cat</label></li>
+            </ul>
+
+            <p>Starting Point</p>
+            <input type="number" name="startX" placeholder="x:">
+            <input type="number" name="startY" placeholder="y:">
+            <p>Ending Point</p>
+            <input type="number" name="endX" placeholder="x:">
+            <input type="number" name="endY" placeholder="y:">
+
+            <p>Duration (milliseonds)</p>
+            <input type="number" name="duration" placeholder="250">
+            <input type="submit" value="Add">
+          </form>
+        </div>
+    </main>
+
+
+  </body>
+</html>

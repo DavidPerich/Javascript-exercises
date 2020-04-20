@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <h1>Sign up Form</h1>
+    <article>
+      <p id="header-error" class="error">Form cannot be submitted until errors are corrected</p>
+      <form action="#" method="post" novalidate autocomplete="off">
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName">
+        <p class="error"></p>
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+        <p class="error"></p>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="fake@fake.com">
+        <p class="error"></p>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <p class="error"></p>
+
+        <label for="phone">Phone Number</label>
+        <input type="phone" name="phone" id="phone" placeholder="0000-000-000">
+        <p class="error"></p>
+
+        <input type="submit" value="Sign Up">
+      </form>
+    </article>
+    </main>
+  </body>
+</html>

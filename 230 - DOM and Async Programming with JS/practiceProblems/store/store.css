@@ -1,0 +1,53 @@
+html {
+  background: #EEE196;
+}
+
+body {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 20px;
+  background: white;
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas: "search search"
+                       "header  header"
+                       "sidebar  games";
+  grid-template-rows: 50px 1fr 4fr;
+  grid-template-columns: 150px 1fr;
+  align-items: flex-start;
+}
+
+div.sidebar {
+  grid-area: sidebar;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.search {
+  grid-area: search;
+  padding: 0 0 20px 10px;
+}
+
+h1.title {
+  grid-area: header;
+}
+
+table {
+  grid-area: games;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+td {
+  border-top: 1px solid lightgrey;
+  padding: 10px 0;
+
+}
+
+tbody .games-hover {
+  background-color: lightcoral;
+  cursor: pointer;
+}

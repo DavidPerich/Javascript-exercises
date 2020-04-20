@@ -1,0 +1,141 @@
+/*
+----------------------------------------
+Tantek Celik's Whitepsace Reset
+    Author:Tantek Celik, Shane Riley
+    Version:(CC) 2010 Some Rights Reserved
+                - http://creativecommons.org/licenses/by/2.0
+Description:	Resets default styling of common browsers to a common base
+----------------------------------------
+*/
+
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6, pre, code { font-size: 1rem; }
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote,
+fieldset,input, dl, dt, dd, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+a img, :link img, :visited img, fieldset { border: none; }
+address { font-style: normal; }
+
+header, section, article, nav, footer, hgroup, details, summary, figure, main {
+  display: block;
+}
+
+mark {
+  color: inherit;
+  background: transparent;
+}
+
+abbr { border: none; }
+summary::-webkit-details-marker { display: none; }
+
+body {
+  background-color: #2E6543;
+}
+
+main {
+  padding: 40px 30px;
+}
+
+h1 {
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+}
+
+#todoList li {
+  padding: 16px 20px 0 20px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #222;
+  height: 50px;
+  margin-bottom: 20px;
+  text-indent: 0;
+  border-radius: 5px;
+}
+
+#todoList ul {
+  width: 600px;
+  position: relative;
+  margin-left: 30px;
+}
+
+#modal {
+  z-index: 2;
+  width: 500px;
+  height: 100px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -250px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 10px 10px 10px #222, -10px 10px 10px #222 ;
+  border: #222;
+}
+
+#contextMenu {
+  position: absolute;
+  background-color: grey;
+  color: white;
+  width: 150px;
+
+}
+
+
+#contextMenu ul {
+  box-sizing: border-box;
+  border-spacing: 0;
+}
+
+#contextMenu li {
+  border: 1px white solid;
+  padding: 10px;
+}
+
+#contextMenu a {
+  text-decoration: none;
+  color: black;
+}
+
+
+h2  {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.actions {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+
+
+button {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+#yesButton {
+  background-color: red;
+}
+
+#noButton {
+  background-color: green;
+}
+

@@ -1,0 +1,153 @@
+/*
+----------------------------------------
+Tantek Celik's Whitepsace Reset
+    Author:Tantek Celik, Shane Riley
+    Version:(CC) 2010 Some Rights Reserved
+                - http://creativecommons.org/licenses/by/2.0
+Description:	Resets default styling of common browsers to a common base
+----------------------------------------
+*/
+
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6, pre, code { font-size: 1rem; }
+
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote,
+fieldset,input, dl, dt, dd, figure, figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+a img, :link img, :visited img, fieldset { border: none; }
+address { font-style: normal; }
+
+header, section, article, nav, footer, hgroup, details, summary, figure, main {
+  display: block;
+}
+
+mark {
+  color: inherit;
+  background: transparent;
+}
+
+abbr { border: none; }
+summary::-webkit-details-marker { display: none; }
+
+body {
+  background-color: #2E6543;
+
+}
+
+main {
+  padding: 40px 30px;
+}
+
+h1 {
+  color: white;
+  font-size: 27px;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 20px;
+}
+
+li {
+  padding: 16px 20px 0 20px;
+  box-sizing: border-box;
+  background: #fff;
+  color: #222;
+  height: 50px;
+  margin-bottom: 20px;
+  text-indent: 0;
+  border-radius: 5px;
+}
+
+ul {
+  width: 600px;
+  position: relative;
+  margin-left: 30px;
+}
+
+span.remove {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  transform: rotate(45deg);
+  right: 20px;
+  cursor: pointer;
+}
+
+span.remove:hover {
+  width: 24px;
+  height: 24px;
+}
+
+span.remove:before, span.remove:after {
+  background: #ec5555;
+  content: "";
+  position: absolute;
+}
+span.remove:before {
+  height: 3px;
+  top: 50%;
+  right: 0;
+  left: 0;
+  margin-top: -1px;
+}
+span.remove:after {
+  width: 3px;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  margin-left: -1px;
+}
+
+#modal {
+  width: 500px;
+  height: 100px;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  margin-left: -250px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 10px 10px 10px #222, -10px 10px 10px #222 ;
+  border: #222;
+}
+
+h2  {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.actions {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+
+
+button {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+
+
+}
+
+#yesButton {
+  background-color: red;
+}
+
+#noButton {
+  background-color: green;
+}

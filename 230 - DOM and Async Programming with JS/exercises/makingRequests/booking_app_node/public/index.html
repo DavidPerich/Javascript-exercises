@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Retrieve schedules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script defer src="javascripts/retrieve.js"></script>
+    <script defer src="javascripts/addStaff.js"></script>
+		<script defer src="javascripts/addSchedule.js"></script>
+		<script defer src="javascripts/bookSchedule.js"></script>
+
+
+</head>
+<body>
+	<div id="retrieveSchedules" class="display-box">
+			<h2>Retrieve the number of available schedules for each staff member</h2>
+			<button>Click to check</button>
+			<ul class="schedules"></ul>
+	</div>
+
+	<div id="addStaff" class="display-box">
+		<h2>Add new staff member</h2>
+		<form action="/api/staff_members" method="POST" novalidate>
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email">
+			<label for="name">Name:</label>
+
+			<input type="text" name="name" id="name">
+			<input type="submit">
+		</form>
+	</div>
+
+  <section id="addSchedule" class="display-box">
+		<h2>Add more schedules</h2>
+		<button id="btnAdd">Add more schedules</button>
+		<form method="post" action="/api/schedules">
+			<div id="schedules"></div>
+			<input id="btnSubmit" type="submit">
+		</form>
+	 </section>
+
+	 <section id="book-schedule" class="display-box">
+		<h2>Book a schedule</h2>
+		<form action="post" action="/api/bookings">
+		<label for="schedule">Please select one schedule</label>
+		<select name="schedule"></select>
+		<label for="email">Your Email</label>
+		<input type="email" name="email">
+		<input type="submit" value="submit">
+	</form>
+
+	 </section>
+
+	<script id="scheduleTemplate" type="text/x-handlebars">
+		<div class="add-schedule-box">
+			<h3>schedule {{scheduleId}}</h3>
+			<label for="staff_id">Staff Name:</label>
+			<select name="staff_id" class="scheduleSelect">
+			</select>
+
+			<label for="date">Date:</label>
+
+			<input type="date" name="date">
+			<label for="time">Time:</label>
+
+			<input type="time" name="time">
+		</div>
+	</script>
+
+
+	<script id="staffOptionTemplate" type="text/x-handlebars">
+		{{#each staff}}
+			<option value="{{id}}">{{name}}</option>
+		{{/each}}
+	</script>
+
+	    <script id="scheduleOptionsTemplate" type="text/x-handlebars">
+				{{#each schedule}}
+					<option value="{{id}}">{{staff_name}} | {{date}} | {{time}}</option>
+				{{/each}}
+			</script>
+
+
+
+
+</body>
+

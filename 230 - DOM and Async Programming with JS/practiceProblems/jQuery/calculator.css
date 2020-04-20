@@ -1,0 +1,15 @@
+body {
+  text-align: center;
+  padding: 100px;
+  border: 10px solid black;
+  align-content: center;
+}
+
+div {
+  background: greenyellow;
+  padding: 100px;
+}
+
+h2 {
+  font-size: 2em;
+}

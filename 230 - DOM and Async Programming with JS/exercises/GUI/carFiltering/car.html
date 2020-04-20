@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>your page title goes here</title>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Buy Used Cards</h1>
+          <div id="filters">
+              <label for="make_select">Make</label>
+              <select name="make" id="make_select">
+                <option value="Any">Any</option>
+              </select>
+
+              <label for="model_select">Model</label>
+              <select name="model" id="model_select">
+                <option value="Any">Any</option>
+              </select>
+
+              <label for="price_select">Price</label>
+              <select name="price" id="price_select">
+                <option value="Any">Any</option>
+              </select>
+
+              <label for="year_select">Year</label>
+              <select name="year" id="year_select">
+                 <option value="Any">Any</option>
+              </select>
+          </div>
+      </header>
+
+      <section id="carResults">
+
+      <section>
+
+      <script id="carTemplate" type="text/x-handlebars">
+        {{#each cars}}
+        <div class="cars">
+          <img src={{image}}>
+          <h3>{{make}}</h3>
+          <p>Year: {{year}}<p>
+          <p>Price: {{price}}<p>
+          <button>Buy</button>
+        </div>
+        {{/each}}
+      </script>
+    </main>
+  </body>
+</html>
